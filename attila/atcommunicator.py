@@ -188,7 +188,7 @@ class ATCommunicator(object):
         t_timeout = t_start + (timeout * 1000)
         t_now = t_start
         data_still_available = True
-        sleep_time_based_on_baud = 100 / self.baud_rate  # Milliseconds
+        sleep_time_based_on_baud = 1000 / self.baud_rate  # Milliseconds
 
         # Try to read until there are data available and t_now < t_timeout
         while t_now < t_timeout and data_still_available:
